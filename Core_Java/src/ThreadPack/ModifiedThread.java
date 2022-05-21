@@ -13,8 +13,8 @@ public class ModifiedThread  {
 		ExecutorService es=Executors.newFixedThreadPool(1);
 		Future<String> future=es.submit(new MyThreadDemo3());
 		String result=future.get();
-		
-		
+				
+
 		System.out.println("Main Thread Callled ");
 	    for(int i=0;i<5;i++) {
 	    	System.out.println(i);
