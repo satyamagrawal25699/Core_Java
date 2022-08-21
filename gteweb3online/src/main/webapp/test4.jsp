@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,15 +9,14 @@
 </head>
 <body>
 
-<%
-	String uname=request.getParameter("name");
-	if(uname.equals("Rahim")){
-%>
-	<jsp:forward page="Welcome.jsp"/>
 
-<%  } %>
 	
-
+	
+	<c:set var="uname" value="<%=request.getParameter(\"uname\") %>"/>  
+	<c:if test="${ name.equals(\"Rahim\")}">  
+			<jsp:forward page="Welcome.jsp"/>
+			
+	</c:if>
 
 </body>
 </html>
